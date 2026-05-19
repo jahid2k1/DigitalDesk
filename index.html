@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+    padding:20px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.title{
+    font-size:32px;
+    font-weight:600;
+}
+
+.search-box{
+    width:100%;
+    margin-bottom:25px;
+}
+
+.search-box input{
+    width:100%;
+    padding:14px 18px;
+    border:none;
+    border-radius:14px;
+    background:#1e293b;
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+.category{
+    margin-bottom:35px;
+}
+
+.category h2{
+    margin-bottom:18px;
+    font-size:22px;
+    color:#cbd5e1;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:18px;
+    text-decoration:none;
+    color:white;
+    transition:0.25s;
+    border:1px solid transparent;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#38bdf8;
+    background:#243447;
+}
+
+.card h3{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.card p{
+    margin-top:6px;
+    font-size:13px;
+    color:#cbd5e1;
+}
+
+.icon{
+    font-size:34px;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.quick-tools{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.quick-btn{
+    padding:10px 16px;
+    border:none;
+    border-radius:12px;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.quick-btn:hover{
+    opacity:0.9;
+}
+
+@media(max-width:600px){
+    .title{
+        font-size:24px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <div class="title">⚡ Service Dashboard</div>
+</div>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search services...">
+</div>
+
+<div class="quick-tools">
+    <button class="quick-btn" onclick="openAllPassport()">Open Passport Tools</button>
+    <button class="quick-btn" onclick="copyBkash()">Copy bKash Number</button>
+    <button class="quick-btn" onclick="window.location.reload()">Refresh</button>
+</div>
+
+<!-- Government Services -->
+<div class="category">
+    <h2>Government Services</h2>
+
+    <div class="grid">
+
+        <a class="card" href="https://services.nidw.gov.bd" target="_blank">
+            <div class="icon">🪪</div>
+            <h3>NID Service</h3>
+            <p>National ID services</p>
+        </a>
+
+        <a class="card" href="https://www.epassport.gov.bd" target="_blank">
+            <div class="icon">🛂</div>
+            <h3>ePassport</h3>
+            <p>Passport application portal</p>
+        </a>
+
+        <a class="card" href="https://bdris.gov.bd" target="_blank">
+            <div class="icon">📄</div>
+            <h3>Birth Certificate</h3>
+            <p>Birth registration services</p>
+        </a>
+
+        <a class="card" href="https://dl.brta.gov.bd" target="_blank">
+            <div class="icon">🚗</div>
+            <h3>BRTA</h3>
+            <p>Driving & vehicle services</p>
+        </a>
+
+        <a class="card" href="https://pcc.police.gov.bd" target="_blank">
+            <div class="icon">👮</div>
+            <h3>Police Clearance</h3>
+            <p>Online police clearance</p>
+        </a>
+
+    </div>
+</div>
+
+<!-- Education -->
+<div class="category">
+    <h2>Education</h2>
+
+    <div class="grid">
+
+        <a class="card" href="https://www.nu.ac.bd" target="_blank">
+            <div class="icon">🎓</div>
+            <h3>National University</h3>
+            <p>NU services</p>
+        </a>
+
+        <a class="card" href="https://www.educationboardresults.gov.bd" target="_blank">
+            <div class="icon">📚</div>
+            <h3>Board Results</h3>
+            <p>SSC / HSC results</p>
+        </a>
+
+        <a class="card" href="https://xiclassadmission.gov.bd" target="_blank">
+            <div class="icon">🏫</div>
+            <h3>College Admission</h3>
+            <p>XI class admission</p>
+        </a>
+
+    </div>
+</div>
+
+<!-- Utility Tools -->
+<div class="category">
+    <h2>Utility Tools</h2>
+
+    <div class="grid">
+
+        <a class="card" href="https://www.ilovepdf.com" target="_blank">
+            <div class="icon">📑</div>
+            <h3>iLovePDF</h3>
+            <p>Merge & edit PDF</p>
+        </a>
+
+        <a class="card" href="https://www.remove.bg" target="_blank">
+            <div class="icon">🖼️</div>
+            <h3>RemoveBG</h3>
+            <p>Background remover</p>
+        </a>
+
+        <a class="card" href="https://translate.google.com" target="_blank">
+            <div class="icon">🌐</div>
+            <h3>Google Translate</h3>
+            <p>Translation tool</p>
+        </a>
+
+        <a class="card" href="https://tinywow.com" target="_blank">
+            <div class="icon">🛠️</div>
+            <h3>TinyWow</h3>
+            <p>All-in-one tools</p>
+        </a>
+
+    </div>
+</div>
+
+<!-- Payments -->
+<div class="category">
+    <h2>Payments</h2>
+
+    <div class="grid">
+
+        <a class="card" href="https://www.bkash.com" target="_blank">
+            <div class="icon">💰</div>
+            <h3>bKash</h3>
+            <p>Mobile banking</p>
+        </a>
+
+        <a class="card" href="https://www.nagad.com.bd" target="_blank">
+            <div class="icon">💳</div>
+            <h3>Nagad</h3>
+            <p>Digital payment</p>
+        </a>
+
+        <a class="card" href="https://url.hk/i/en/4ev3v" target="_blank">
+            <div class="icon">🌍</div>
+            <h3>RedotPay</h3>
+            <p>Virtual card services</p>
+        </a>
+
+    </div>
+</div>
+
+<!-- AI & Office -->
+<div class="category">
+    <h2>AI & Office</h2>
+
+    <div class="grid">
+
+        <a class="card" href="https://chatgpt.com" target="_blank">
+            <div class="icon">🤖</div>
+            <h3>ChatGPT</h3>
+            <p>AI assistant</p>
+        </a>
+
+        <a class="card" href="https://www.canva.com" target="_blank">
+            <div class="icon">🎨</div>
+            <h3>Canva</h3>
+            <p>Graphic design</p>
+        </a>
+
+        <a class="card" href="https://mail.google.com" target="_blank">
+            <div class="icon">📧</div>
+            <h3>Gmail</h3>
+            <p>Email management</p>
+        </a>
+
+        <a class="card" href="https://drive.google.com" target="_blank">
+            <div class="icon">☁️</div>
+            <h3>Google Drive</h3>
+            <p>Cloud storage</p>
+        </a>
+
+    </div>
+</div>
+
+<div class="footer">
+    Made for personal online service workflow ⚡
+</div>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.card');
+
+searchInput.addEventListener('keyup', function(){
+    const value = this.value.toLowerCase();
+
+    cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+
+        if(text.includes(value)){
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
+
+function openAllPassport(){
+    window.open('https://www.epassport.gov.bd','_blank');
+    window.open('https://www.ilovepdf.com','_blank');
+    window.open('https://www.remove.bg','_blank');
+}
+
+function copyBkash(){
+    navigator.clipboard.writeText('01XXXXXXXXX');
+    alert('bKash number copied!');
+}
+</script>
+
+</body>
+</html>
